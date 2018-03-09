@@ -37,21 +37,30 @@
         <title>Programming Using Python</title>
     </head>
 <body>
+
         <script>
+                alert("1");
                 var x = document.getElementById("demo");
                 function getLocation() {
                     if (navigator.geolocation) {
                         navigator.geolocation.getCurrentPosition(showPosition);
+                        alert("1.1")
                     } else {
                         x.innerHTML = "Geolocation is not supported by this browser.";
+                        alert("0");
                     }
                 }
                 function showPosition(position) {
+                        alert("2");
                     x.innerHTML = "Latitude: " + position.coords.latitude + 
-                    "<br>Longitude: " + position.coords.longitude; 
+                    "<br>Longitude: " + position.coords.longitude;
+                    alert("2.1"); 
                 }
+                alert("1.1.1");
                 getLocation();
+                alert("1.1.2");
                 showPosition();
+                alert("1.1.3");
                 </script>
         <P id='demo'>XXX</p>
         <h1>Programming Using Python</h1><p>Master programming using Python. Python is a one-stop shop with framework for pretty much anything, from web apps to data analysis. This course will help you understand all aspects of Python programming.</p>
